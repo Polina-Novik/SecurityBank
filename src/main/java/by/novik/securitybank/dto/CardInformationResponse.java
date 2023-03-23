@@ -6,7 +6,7 @@ import lombok.Data;
 public class CardInformationResponse {
 
 
-    Long cardNumber;
+    private Long cardNumber;
     private String name;
     private String surname;
     private String date;

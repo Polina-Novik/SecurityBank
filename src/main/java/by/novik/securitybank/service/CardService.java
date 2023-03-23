@@ -47,7 +47,7 @@ public class CardService {
             card.setSum(card.getSum() - price);
             return converter.convert(cardRepository.save(card));
         } else {
-            return null;
+            throw new RuntimeException("not enough money");
         }
 
     }
@@ -61,7 +61,7 @@ public class CardService {
             converter.convert(cardRepository.save(card2));
             return converter.convert(cardRepository.save(card1));
         } else {
-            return null;
+            throw new RuntimeException("not enough money");
         }
     }
 
